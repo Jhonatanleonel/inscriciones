@@ -1,0 +1,178 @@
+:root {
+    --amarillo: #f4d03f;
+    --celeste: #0ea0e2;
+    --azul-marino: #0b172a;
+    --gris-claro: #f4f6f8;
+    --blanco: #ffffff;
+    --rojo: #e74c3c;
+    --verde: #2ecc71;
+}
+
+.container {
+    padding: 2rem;
+    background-color: var(--azul-marino);
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    margin-bottom: 2rem;
+    color: var(--amarillo);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* --- FORMULARIO --- */
+.formCard {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--celeste);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.input {
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--celeste);
+    background: transparent;
+    color: var(--blanco);
+    font-size: 1rem;
+    width: 250px;
+    outline: none;
+}
+
+.input:focus {
+    border-color: var(--amarillo);
+    box-shadow: 0 0 5px var(--amarillo);
+}
+
+.buttonSave {
+    padding: 0.7rem 1.5rem;
+    background-color: var(--verde);
+    color: var(--azul-marino);
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.buttonSave:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+.buttonCancel {
+    padding: 0.7rem 1.5rem;
+    background-color: transparent;
+    border: 1px solid var(--rojo);
+    color: var(--rojo);
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.buttonCancel:hover {
+    background-color: var(--rojo);
+    color: var(--blanco);
+}
+
+/* --- TABLA --- */
+.tableWrapper {
+    width: 100%;
+    max-width: 800px;
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.table th {
+    background-color: rgba(14, 160, 226, 0.2);
+    color: var(--celeste);
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.table td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.table tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* BOTONES DE ACCIÓN (Igual que Inscritos) */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.actionButton {
+    padding: 0.3rem 0.6rem;
+    background-color: var(--celeste);
+    color: var(--blanco);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.actionButton:hover {
+    background-color: var(--amarillo);
+    color: var(--azul-marino);
+}
+
+.actionButtonDelete {
+    padding: 0.3rem 0.6rem;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.actionButtonDelete:hover {
+    background-color: #c0392b;
+}
+
+/* RESPONSE */
+@media (max-width: 600px) {
+    .formCard {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .input {
+        width: 100%;
+    }
+}

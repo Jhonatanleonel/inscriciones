@@ -5,7 +5,9 @@ import Inscritos from "./pages/Adm/Tablas/Inscritos";
 import Formularion from "./pages/Inscripcion/Formularion";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import Iglesias from "./pages/Adm/Tablas/Iglesias";
+import Reporte from "./pages/Adm/Reporte";
+import Cabeza from "./componentes/Cabeza";
 function App() {
   return (
     <>
@@ -16,6 +18,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/inscritos" element={<Inscritos />} />
         <Route path="/formularion" element={<Formularion />} />
+        <Route path="/iglesias" element={<Iglesias />} />
+        <Route path="/reporte" element={<Reporte />} />
+        <Route path="/cabeza" element={<Cabeza />} />
       </Routes>
     </>
   );

@@ -150,11 +150,12 @@ export default function Formulario() {
     <div className={Style.caja}>
       <div className={Style.caja2}>
         <div className={Style.container}>
+          <a href="/"><button className={Style.regresar}>← Regresar</button></a>
           <h1>Inscripción</h1>
           <div className={Style.qr}>
-            <p>el pago es por persona, para evitar incombenientes</p>
-            <img src="imagenes/qrjhonatan.png" alt="" />
-            <p> el pago no es obligatorio pero para evitar filas largar el sabado en la noche</p>
+            <p>El pago es por solo una persona (no se paga de grupos de personas para evitar confuciones), para evitar inconvenientes.</p>
+            <img src="imagenes/qrjhonatan.png" alt="QR Pago" />
+            <p>El pago no es obligatorio, pero ayuda a evitar filas largas el sábado por la noche.</p>
           </div>
           <form onSubmit={handleSubmit}>
             <fieldset>
@@ -166,8 +167,8 @@ export default function Formulario() {
 
               <select name="genero" value={formValues.genero} onChange={handleChange} required>
                 <option value="">Género</option>
-                <option>Masculino</option>
-                <option>Femenino</option>
+                <option value="M">Masculino</option>
+                <option value="F">Femenino</option>
               </select>
 
               <input type="number" name="edad" placeholder="Edad" value={formValues.edad} onChange={handleChange} required />
@@ -183,36 +184,29 @@ export default function Formulario() {
             <fieldset>
               <legend>Pago</legend>
 
-              {/* ✅ CHECKBOX CORREGIDO */}
               <div className={Style.checkbox}>
-              <input
-                type="checkbox"
-                id="pago"
-                checked={realizoPago}
-                onChange={handlePagoChange}
-              />
-              <label htmlFor="pago">¿Realizó el pago?</label>
-            </div>
-
+                <input type="checkbox" id="pago" checked={realizoPago} onChange={handlePagoChange} />
+                <label htmlFor="pago">¿Realizó el pago?</label>
+              </div>
 
               {realizoPago && (
                 <>
-                  <input
-                    type="tel"
-                    name="telefono"
-                    placeholder="Teléfono"
-                    value={formValues.telefono}
-                    onChange={handleChange}
-                  />
-                  <input type="file" accept="image/*" onChange={handleFileChange} />
-                  {comprobantePreview && (
-                    <img src={comprobantePreview} alt="Preview" className={Style.preview} />
-                  )}
+                  <input type="tel" name="telefono" placeholder="Teléfono" value={formValues.telefono} onChange={handleChange} />
+                  <br />
+                  <div className={Style.fileWrapper}><br />
+                    <input id="fileInput" type="file" accept="image/*" onChange={handleFileChange} />
+                    <label htmlFor="fileInput" className={Style.fileLabel}>
+                      {comprobanteFile ? "Cambiar comprobante" : "Seleccionar comprobante"}
+                    </label>
+                    {comprobantePreview && (
+                      <img src={comprobantePreview} alt="Preview" className={Style.preview} />
+                    )}
+                  </div>
                 </>
               )}
             </fieldset>
 
-            <button disabled={isSubmitting}>
+            <button className={Style.submitBtn} disabled={isSubmitting}>
               {isSubmitting ? "Enviando..." : "Confirmar"}
             </button>
           </form>
