@@ -1,0 +1,444 @@
+/* Variables y Reset */
+:root {
+  --amarillo: #f4d03f;
+  --celeste: #35bcfb;
+  --azul-marino: #0b172a;
+  --blanco-glass: rgba(255, 255, 255, 0.15);
+}
+*{
+    margin: 0;
+    padding: 0;
+
+}
+a{
+  text-decoration: none;
+}
+
+.containerGlobal * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fondo general */
+.fondo {
+  min-height: 100vh;
+  background-image: linear-gradient(180deg, var(--azul-marino) 0%, var(--celeste) 50%, var(--azul-marino) 100%);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden; /* Evita scroll horizontal en celular */
+}
+
+/* Contenedor central para limitar el ancho en PC */
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*---------------- TITULO ----------------*/
+.titulo {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  animation: fadeIn 1.5s ease;
+}
+
+.titulo img {
+  height: 90px;
+  filter: drop-shadow(0 0 10px rgba(14, 160, 226, 0.6));
+}
+
+.titulo h3 {
+  color: white;
+  font-weight: 10;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.titulo h2 {
+  color: var(--celeste);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.tituloPrincipal {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.9;
+  margin-top: 10px;
+}
+
+.guarda {
+  color: white;
+  font-size: 4rem;
+  font-weight: 900;
+  padding: 10px;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.corazon {
+  font-size: 3rem;
+  color: var(--amarillo);
+  font-weight: 900;
+  padding: 10px;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/*---------------- CRONOMETRO ----------------*/
+.cronometro {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.celdaTiempo {
+  background: rgba(255, 255, 255, 0.285);
+  backdrop-filter: blur(10px); /* Efecto vidrio */
+  border: 1px solid rgba(255, 255, 255, 0.092);
+  padding: 15px;
+  width: 85px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.celdaTiempo h1 {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.celdaTiempo p {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/*---------------- AFICHE ----------------*/
+.aficheContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.aficheImg {
+  width: 100%;
+  max-width: 600px; /* Tamaño máximo en PC */
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border: 2px solid rgba(255,255,255,0.1);
+  transition: transform 0.3s;
+}
+
+.aficheImg:hover {
+  transform: scale(1.02);
+}
+/*-------------------cupos disponibles----------------*/
+.cuposDisponibles{
+  text-align: center;
+}
+.cuposDisponibles h1{
+  color: var(--amarillo);
+  text-shadow: 2px 2px 0.2px  #050c18;
+  font-size: 3rem;
+}
+
+.cuposDisponibles h2{
+  font-size: 2rem;
+  color:rgba(240, 248, 255, 0.69);
+}
+/*---------------- BOTONES ----------------*/
+.botonCTA {
+  background-color: var(--amarillo);
+  color: var(--azul-marino);
+  padding: 18px 40px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(244, 208, 63, 0.4);
+  transition: all 0.3s ease;
+  border: none;
+  text-decoration: none;
+  margin: 20px 0;
+}
+
+.botonCTA:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(244, 208, 63, 0.6);
+  background-color: #ffe066;
+}
+
+.administracion{
+    background-color: #0b283656;
+    border-radius: 60px;
+    padding: 18px 40px;
+    color: var(--amarillo);
+    font-size: 1rem;
+    border: 1px solid var(--amarillo);
+}
+.administracion:hover {
+    background-color: var(--amarillo);
+    transition: 1s ease-in-out ;
+    color: var(--azul-marino);
+    transform: scale(1.1);
+}
+/*---------------- LOCAL STORAGE ----------------*/
+.localstorage {
+  width: 100%;
+  margin: 40px 0;
+  background: rgba(4, 19, 62, 0.162);
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  overflow-x: auto;
+}
+
+.localstorage h2 {
+  text-align: center;
+  color: var(--amarillo);
+  margin-bottom: 20px;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla th,
+.tabla td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  text-align: center;
+}
+
+.tabla th {
+  background: rgba(11, 23, 42, 0.7);
+  color: var(--celeste);
+  font-weight: bold;
+}
+
+.tabla tr:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/*---------------- INFORMACION TEXTO ----------------*/
+.infoTexto {
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.infoTexto h2 {
+  color: var(--amarillo);
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.infoTexto p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/*---------------- GRID CAJAS INFO ----------------*/
+.gridInfo {
+  display: grid;
+  /* Esto hace la magia responsive: crea columnas automáticas */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.cardInfo {
+  background: rgba(11, 23, 42, 0.442);
+  border: 1px solid var(--celeste);
+  border-radius: 15px;
+  padding: 30px 20px;
+  text-align: center;
+  color: white;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardInfo:hover {
+  background: rgba(2, 11, 37, 0.573);
+  transform: translateY(-5px);
+}
+
+.cardIcon {
+  font-size: 2.5rem;
+  color: var(--celeste);
+  margin-bottom: 15px;
+}
+
+.cardInfo h2 {
+  color: var(--amarillo);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.cardInfo h1 {
+  font-size: 1.8rem;
+  margin: 5px 0;
+}
+
+.separador {
+  width: 40px;
+  height: 2px;
+  background: rgba(255,255,255,0.3);
+  margin: 10px 0;
+}
+
+/*---------------- GALERIA POLAROID ----------------*/
+.galeriaSection {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.galeriaSection h1 {
+  color: var(--amarillo);
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+}
+
+.galeriaGrid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.polaroid {
+  background: white;
+  padding: 10px 10px 25px 10px;
+  width: 180px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Rotación alterna para efecto realista */
+.polaroid:nth-child(odd) { transform: rotate(-3deg); }
+.polaroid:nth-child(even) { transform: rotate(3deg); }
+
+.polaroid:hover {
+  transform: rotate(0deg) scale(1.1); /* Se endereza y agranda */
+  z-index: 10;
+}
+
+.polaroid img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.polaroid p {
+  color: var(--azul-marino);
+  font-weight: 800;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  font-family: 'Courier New', Courier, monospace; /* Fuente tipo máquina de escribir */
+}
+
+/*---------------- INVITACION FINAL ----------------*/
+.invitacionBox {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.invitacionBox h1 {
+  color: var(--celeste);
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.invitacionBox p {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.botonOutline {
+  background: transparent;
+  border: 2px solid var(--amarillo);
+  color: var(--amarillo);
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botonOutline:hover {
+  background: var(--amarillo);
+  color: var(--azul-marino);
+}
+
+/*---------------- FOOTER ----------------*/
+.footer {
+  width: 100%;
+  background: #050c18;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer img {
+  height: 40px;
+  margin-bottom: 15px;
+  opacity: 0.7;
+  filter: grayscale(100%);
+}
+
+.footer p {
+  color: rgba(255,255,255,0.5);
+  font-size: 0.9rem;
+}
+
+/*---------------- MEDIA QUERIES (CELULARES) ----------------*/
+@media (max-width: 768px) {
+  .guarda { font-size: 3rem; }
+  .corazon { font-size: 2.2rem; }
+  
+  .cronometro { gap: 10px; }
+  .celdaTiempo { width: 70px; padding: 10px; }
+  .celdaTiempo h1 { font-size: 1.5rem; }
+  
+  .botonCTA { width: 100%; justify-content: center; }
+  
+  .polaroid { width: 45%; } /* En celus las fotos se ven de a 2 */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
