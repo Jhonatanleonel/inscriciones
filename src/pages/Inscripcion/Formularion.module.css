@@ -30,6 +30,7 @@
   box-sizing: border-box;
 }
 .qr{
+ 
   display: flex;
   justify-content: center;
   flex-direction: column;
