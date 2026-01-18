@@ -153,8 +153,11 @@ export default function Formulario() {
           <a href="/"><button className={Style.regresar}>← Regresar</button></a>
           <h1>Inscripción</h1>
           <div className={Style.qr}>
-            <p>El pago es por solo una persona (no se paga de grupos de personas para evitar confuciones), para evitar inconvenientes.</p>
-            <img src="imagenes/qrjhonatan.png" alt="QR Pago" />
+            <p>El pago es por solo una persona, no grupales<br /><br />
+              Bs. 200 Adultos <br />
+              Bs. 150 Menores (5-10 años) <br />
+            </p>
+            <img src="imagenes/qroficial.png" alt="QR Pago" />
             <p>El pago no es obligatorio, pero ayuda a evitar filas largas el sábado por la noche.</p>
           </div>
           <form onSubmit={handleSubmit}>

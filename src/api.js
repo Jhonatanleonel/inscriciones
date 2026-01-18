@@ -19,7 +19,11 @@ const api = axios.create({
   baseURL: "https://backent-4utv.onrender.com/",
   withCredentials: true, // 🔑 NECESARIO para CSRF
 });
-/*     https://backent-4utv.onrender.com    */
+/*     https://backent-4utv.onrender.com/   
+       https://backent-4utv.onrender.com/
+       http://127.0.0.1:8000/
+       
+*/
 // 👉 Interceptor de REQUEST (NO response)
 api.interceptors.request.use(
   (config) => {
