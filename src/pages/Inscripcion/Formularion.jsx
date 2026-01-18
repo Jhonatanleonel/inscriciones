@@ -160,7 +160,7 @@ export default function Formulario() {
             <img src="imagenes/qroficial.png" alt="QR Pago" />
             <a href="imagenes/qrdescarga.png" download>
               <button className={Style.descargar}>
-                <ion-icon name="download-outline"></ion-icon>
+                <ion-icon name="cloud-download-outline"></ion-icon>
                 <p>Descargar</p>
               </button>
             </a>
