@@ -158,6 +158,13 @@ export default function Formulario() {
               Bs. 150 Menores (5-10 años) <br />
             </p>
             <img src="imagenes/qroficial.png" alt="QR Pago" />
+            <a href="imagenes/qrdescarga.png" download>
+              <button className={Style.descargar}>
+                <ion-icon name="download-outline"></ion-icon>
+                <p>Descargar</p>
+              </button>
+            </a>
+
             <p>El pago no es obligatorio, pero ayuda a evitar filas largas el sábado por la noche.</p>
           </div>
           <form onSubmit={handleSubmit}>
