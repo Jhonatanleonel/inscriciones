@@ -132,7 +132,6 @@ export default function Index() {
             <ion-icon name="heart"></ion-icon>
             <span>¡INSCRIBETE AHORA!</span>
           </a>
-          <button className={styles.administracion}>administracion</button>
 
           {/* LISTA DE INSCRITOS LOCALSTORAGE */}
           <div className={styles.localstorage}>
@@ -184,7 +183,8 @@ export default function Index() {
               <p>Enero de 2026</p>
             </div>
 
-            <div className={styles.cardInfo}>
+            <a href="https://www.google.com/maps/place/Balneario+SOFILETI/@-17.6219509,-63.1237718,17z/data=!4m14!1m7!3m6!1s0x93f1e10077b21fe7:0x723f4962e35e7516!2sBalneario+SOFILETI!8m2!3d-17.6219509!4d-63.1211969!16s%2Fg%2F11ygpjjnq_!3m5!1s0x93f1e10077b21fe7:0x723f4962e35e7516!8m2!3d-17.6219509!4d-63.1211969!16s%2Fg%2F11ygpjjnq_?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoASAFQAw%3D%3D">
+              <div className={styles.cardInfo}>
               <div className={styles.cardIcon}>
                 <ion-icon name="location-outline"></ion-icon>
               </div>
@@ -193,6 +193,7 @@ export default function Index() {
               <div className={styles.separador}></div>
               <p>Satélite Norte</p>
             </div>
+            </a>
 
             <div className={styles.cardInfo}>
               <div className={styles.cardIcon}>
@@ -220,7 +221,7 @@ export default function Index() {
           {/* GALERÍA */}
           <div className={styles.galeriaSection}>
             <h1>NUESTRO LUGAR</h1>
-            <p>Balneario Sofileti - Satélite Norte</p>
+            <p style={{ color: "white" }}>Balneario Sofileti - Satélite Norte</p>
             <div className={styles.galeriaGrid}>
               <div className={styles.polaroid}>
                 <img src="/imagenes/camping.png" alt="Camping" />

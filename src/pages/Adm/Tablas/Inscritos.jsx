@@ -122,14 +122,14 @@ export default function Inscritos() {
         <table className={styles.table}>
           <thead>
             <tr>
-              <th onClick={() => ordenarPor("nombre")}>
-                Nombre{iconoOrden("nombre")}
-              </th>
               <th onClick={() => ordenarPor("paterno")}>
                 Paterno{iconoOrden("paterno")}
               </th>
               <th onClick={() => ordenarPor("materno")}>
                 Materno{iconoOrden("materno")}
+              </th>
+              <th onClick={() => ordenarPor("nombre")}>
+                Nombre{iconoOrden("nombre")}
               </th>
               <th onClick={() => ordenarPor("genero")}>
                 Género{iconoOrden("genero")}
@@ -160,9 +160,9 @@ export default function Inscritos() {
           <tbody>
             {inscritosOrdenados.map((i) => (
               <tr key={i.id}>
-                <td>{i.nombre}</td>
                 <td>{i.paterno}</td>
                 <td>{i.materno}</td>
+                <td>{i.nombre}</td>
                 <td>{i.genero}</td>
                 <td>{i.edad}</td>
                 <td>{i.iglesia__nombre}</td>

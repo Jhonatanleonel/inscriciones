@@ -173,7 +173,7 @@ export default function Formulario() {
 
               <input name="nombre" placeholder="Nombre" value={formValues.nombre} onChange={handleChange} required />
               <input name="paterno" placeholder="Apellido paterno" value={formValues.paterno} onChange={handleChange} required />
-              <input name="materno" placeholder="Apellido materno" value={formValues.materno} onChange={handleChange} required />
+              <input name="materno" placeholder="Apellido materno" value={formValues.materno} onChange={handleChange} />
 
               <select name="genero" value={formValues.genero} onChange={handleChange} required>
                 <option value="">Género</option>
@@ -204,7 +204,7 @@ export default function Formulario() {
                   <input type="tel" name="telefono" placeholder="Teléfono" value={formValues.telefono} onChange={handleChange} />
                   <br />
                   <div className={Style.fileWrapper}><br />
-                    <input id="fileInput" type="file" accept="image/*" onChange={handleFileChange} />
+                    <input id="fileInput" type="file" accept="image/*" onChange={handleFileChange} required/>
                     <label htmlFor="fileInput" className={Style.fileLabel}>
                       {comprobanteFile ? "Cambiar comprobante" : "Seleccionar comprobante"}
                     </label>

@@ -20,7 +20,7 @@ const api = axios.create({
   withCredentials: true, // 🔑 NECESARIO para CSRF
 });
 /*     https://backent-4utv.onrender.com/   
-       https://backent-4utv.onrender.com/
+       
        http://127.0.0.1:8000/
        
 */
