@@ -90,7 +90,7 @@ export default function Formulario() {
     e.preventDefault();
     if (isSubmitting) return;
 
-    if (Number(formValues.edad) < 10) {
+    if (Number(formValues.edad) < 0) {
       toast.error("Edad inválida");
       return;
     }
