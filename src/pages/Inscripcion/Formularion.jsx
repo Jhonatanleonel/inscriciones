@@ -152,6 +152,34 @@ export default function Formulario() {
         <div className={Style.container}>
           <a href="/"><button className={Style.regresar}>← Regresar</button></a>
           <h1>Inscripción</h1>
+          <fieldset style={{ border: "1px solid yellow", borderRadius: "8px", padding: "15px" }}>
+  <legend style={{ color: "yellow", fontWeight: "bold", padding: "0 8px" }}>
+    Importante
+  </legend>
+
+  <div style={{ display: "flex", justifyContent: "center" }}>
+    <p
+      style={{
+        color: "yellow",
+        border: "1px dashed yellow",
+        padding: "14px",
+        borderRadius: "6px",
+        maxWidth: "600px",
+        lineHeight: "1.5"
+      }}
+    >
+      Si va a realizar el pago mediante <strong>QR</strong>, efectúe el pago previamente y
+      adjunte el comprobante de pago (<strong>foto</strong>) junto con sus datos.
+      <br /><br />
+      <strong>Nota importante:</strong> una vez enviado el formulario,
+      <u> no será posible adjuntar el comprobante posteriormente</u>.
+      <br /><br />
+      Si no se adjunta el comprobante, el pago será considerado como el pago se realizara
+      <strong> presencial</strong>.
+    </p>
+  </div>
+</fieldset>
+
           <div className={Style.qr}>
             <p>El pago es por solo una persona, no grupales<br /><br />
               Bs. 200 Adultos <br />
@@ -164,8 +192,13 @@ export default function Formulario() {
                 <p>Descargar</p>
               </button>
             </a>
-
-            <p>El pago no es obligatorio, pero ayuda a evitar filas largas el sábado por la noche.</p>
+            
+            <p>
+              El pago no es obligatorio, 
+              pero ayuda a evitar filas 
+              largas el sábado 
+              por la noche.
+            </p>
           </div>
           <form onSubmit={handleSubmit}>
             <fieldset>
