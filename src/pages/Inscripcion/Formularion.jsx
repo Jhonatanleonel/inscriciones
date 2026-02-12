@@ -168,14 +168,11 @@ export default function Formulario() {
         lineHeight: "1.5"
       }}
     >
-      Si va a realizar el pago mediante <strong>QR</strong>, efectúe el pago previamente y
-      adjunte el comprobante de pago (<strong>foto</strong>) junto con sus datos.
+      El comprobante puede acoplarce, posteriormente al registrarse. esta en la pagina del inicio
       <br /><br />
-      <strong>Nota importante:</strong> una vez enviado el formulario,
-      <u> no será posible adjuntar el comprobante posteriormente</u>.
-      <br /><br />
-      Si no se adjunta el comprobante, el pago será considerado como el pago se realizara
-      <strong> presencial</strong>.
+      <strong>
+        si no hay comprobante se considerara que el pago sera de forma presencial
+      </strong>
     </p>
   </div>
 </fieldset>

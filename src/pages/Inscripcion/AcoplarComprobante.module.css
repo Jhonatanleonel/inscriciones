@@ -1,0 +1,204 @@
+:root {
+    --amarillo: #f4d03f;
+    --celeste: #35bcfb;
+    --azul: #0b172a;
+    --blanco: #ffffff;
+    --gris-claro: #e2e8f0;
+}
+
+/* Estructura principal */
+.caja {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--azul);
+}
+
+.caja2 {
+    padding: 5px;
+    border-radius: 25px;
+    background-image: linear-gradient(to bottom, var(--celeste), var(--amarillo));
+}
+
+.container {
+    background: var(--azul);
+    color: var(--blanco);
+    width: 100%;
+    max-width: 450px;
+    padding: 40px 30px;
+    border-radius: 17px;
+    box-sizing: border-box;
+}
+
+.container h1 {
+    text-align: center;
+    color: var(--amarillo);
+    margin-bottom: 20px;
+}
+
+/* Botón regresar */
+.regresar {
+    background-color: var(--amarillo);
+    color: var(--azul);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+}
+
+.regresar:hover {
+    transform: scale(1.05);
+    background-color: var(--celeste);
+    color: var(--blanco);
+}
+
+/* Formulario */
+fieldset {
+    border: 1px solid #ffffff30;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    padding: 15px;
+}
+
+legend {
+    padding: 0 10px;
+    color: var(--celeste);
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--azul);
+    color: var(--blanco);
+    outline: none;
+    transition: all 0.3s;
+}
+
+input:focus,
+select:focus {
+    border: 1px solid var(--celeste);
+}
+
+/* Opciones select */
+option {
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+
+/* Botón submit */
+.submitBtn {
+    width: 100%;
+    padding: 12px;
+    background: var(--celeste);
+    color: var(--azul);
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 15px;
+}
+
+.submitBtn:hover:enabled {
+    transform: scale(1.05);
+    background-color: var(--amarillo);
+    color: var(--azul);
+}
+
+.submitBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Input file interactivo */
+.fileWrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.fileWrapper input[type="file"] {
+    width: 100%;
+    height: 50px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.fileLabel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--amarillo);
+    color: var(--azul);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.fileLabel:hover {
+    background-color: var(--amarillo);
+    color: var(--azul);
+}
+
+.preview {
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 2px solid var(--celeste);
+    transition: transform 0.3s ease;
+}
+
+.preview:hover {
+    transform: scale(1.05);
+}
+
+/* Info Card Design */
+.info {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px dashed var(--amarillo);
+}
+
+.info p {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+    color: var(--blanco);
+    font-size: 0.95rem;
+}
+
+.info p:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.info strong {
+    color: var(--celeste);
+    font-weight: 600;
+}
+
+.info span {
+    text-align: right;
+    color: var(--gris-claro);
+    font-weight: normal;
+}

@@ -127,10 +127,17 @@ export default function Index() {
             <h1>{200 - cuposDisponibles}</h1>
           </div>
 
+
           {/* BOTÓN PRINCIPAL */}
           <a className={styles.botonCTA} href="./formularion">
             <ion-icon name="heart"></ion-icon>
             <span>¡INSCRIBETE AHORA!</span>
+          </a>
+
+          {/* BOTÓN PRINCIPAL */}
+          <a className={styles.BotonAcoplar} href="./comprobante">
+            <ion-icon name="image-outline"></ion-icon>
+            <span>Acoplar Comprobante</span>
           </a>
 
           {/* LISTA DE INSCRITOS LOCALSTORAGE */}

@@ -185,6 +185,35 @@ a{
   background-color: #ffe066;
 }
 
+/* boton de coplar comprobante*/
+.BotonAcoplar{
+    background-color: var(--azul-marino);
+    color: var(--blanco);
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(176, 176, 176, 0.4);
+    transition: all 0.3s ease;
+    border: none;
+    text-decoration: none;
+}
+.BotonAcoplar span{
+  margin-left: 10px;
+}
+.BotonAcoplar ion-icon{
+    font-size: 1.5rem;
+}
+
+.BotonAcoplar:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(176, 176, 176, 0.6);
+    background-color: #0b2836;
+}
+
 .administracion{
     background-color: #0b283656;
     border-radius: 60px;
