@@ -202,3 +202,36 @@ option {
     color: var(--gris-claro);
     font-weight: normal;
 }
+
+/* Descargar Button */
+.descargar {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--amarillo);
+    color: var(--azul);
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.descargar:hover {
+    background-color: var(--celeste);
+    color: var(--blanco);
+}
+
+.descargar p {
+    margin-left: 5px;
+    font-weight: bold;
+    color: #0b172a;
+}
+
+.descargar ion-icon {
+    font-size: 20px;
+    color: #0b172a;
+}

@@ -214,6 +214,16 @@ export default function AcoplarComprobante() {
 
                             <fieldset>
                                 <legend>Acoplar Pago</legend>
+
+                                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}>
+                                    <a href="imagenes/qrdescarga.png" download>
+                                        <button className={Style.descargar} type="button">
+                                            <ion-icon name="cloud-download-outline"></ion-icon>
+                                            <p>Descargar QR</p>
+                                        </button>
+                                    </a>
+                                </div>
+
                                 <input
                                     type="tel"
                                     placeholder="Teléfono de contacto"
