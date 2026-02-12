@@ -204,7 +204,11 @@ export default function AcoplarComprobante() {
                                     <p><strong>Edad:</strong> <span>{inscritoEncontrado.edad}</span></p>
                                     <p><strong>Iglesia:</strong> <span>{inscritoEncontrado.iglesia}</span></p>
                                     <p> <strong>Comprobante:</strong></p>
-                                    <img src={inscritoEncontrado.pagoComprobante} alt="Comprobante" className={Style.preview} />
+                                    {inscritoEncontrado.pagoComprobante ? (
+                                        <img src={inscritoEncontrado.pagoComprobante} alt="Comprobante" className={Style.preview} />
+                                    ) : (
+                                        <span>No hay comprobante</span>
+                                    )}
                                 </div>
                             </fieldset>
 
